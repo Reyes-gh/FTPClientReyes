@@ -159,7 +159,7 @@ public class FTP {
 
             // Carpeta propia donde se guardará el archivo
             System.out.println("Descargando archivo...");
-            if (FTPUtil.downloadSingleFile(FTPCLIENT, filepath,  saveDirPath + filepath)) {
+            if (FTPUtil.downloadSingleFile(FTPCLIENT, filepath,  saveDirPath + "/" + filepath)) {
                 System.out.println("Archivo descargado!");
             } else {
                 System.out.println("Error al descargar archivo!");

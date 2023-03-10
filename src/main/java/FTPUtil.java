@@ -123,13 +123,13 @@ public class FTPUtil {
      */
     public static boolean uploadSingleFile(FTPClient ftpClient,
                                            String localFilePath, String remoteFilePath) throws IOException {
-        File localFile = new File(localFilePath);
 
+        File localFile = new File(localFilePath);
 
         try (InputStream inputStream = new FileInputStream(localFile)){
             ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
             return ftpClient.storeFile(remoteFilePath, inputStream);
         }
-    }
+    }   
 
 }
